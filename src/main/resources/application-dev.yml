@@ -1,0 +1,19 @@
+profile: dev
+env: dev
+
+#日志配置
+log:
+  root:
+    level: INFO
+  appender:
+    root :
+      filter:
+        level: INFO
+  #datasource
+  #datasource.master.url=jdbc:mysql://rm-hp3c91kdh6176eigt41110.mysql.huhehaote.rds.aliyuncs.com:3306/livestock?useUnicode=true&characterEncoding=utf-8
+datasource:
+  master:
+    url: jdbc:mysql://rm-hp3c91kdh6176eigt41110im.mysql.huhehaote.rds.aliyuncs.com:3306/livestock?useUnicode=true&characterEncoding=utf-8
+    username: zhouxiaoguang
+    password: zxg5861235
+    driverClassName: com.mysql.jdbc.Driver

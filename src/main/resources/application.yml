@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: livestock
+  profiles:
+    active: dev
+server:
+  port: 8102
+logging:
+  config: classpath:logback-spring.xml
+log:
+  dir: /mfw_data/server_log/
+  root:
+    level: INFO
+  appender:
+    root:
+      filter:
+        level: INFO
+
+###   Mybatis Config  ###
+mybatis:
+  check-config-location: true
+  typeAliasesPackage: com.gyn.livestock.domain.po
+  mapperLocations: classpath:mapper/**/*.xml
+
+## Pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+###   通用 Mapper    ###
+mapper:
+  IDENTITY: mysql
+  notEmpty: false
